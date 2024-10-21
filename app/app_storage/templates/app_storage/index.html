@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Test</title>
+    <style>
+        form {
+            margin: 2rem;
+            padding: 1rem;
+            border: 1px solid black;
+        }
+        input {
+            padding: 1rem;
+            outline: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="file" id="file" required>
+        <button type="submit">UPLOAD</button>
+    </form>
+</body>
+</html>
